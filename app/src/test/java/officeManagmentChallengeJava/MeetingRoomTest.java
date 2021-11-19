@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MeetingRoomTest {
     @Test public void testAddRoom() {
-        MeetingRoom office1 = new MeetingRoom("Conference Room 1");
-        assertEquals(office1.addRoom(), "Conference Room 1");
+        MeetingRoom TestRoom = new MeetingRoom("Conference Room Test");
+        assertEquals(TestRoom.addRoom(), "Conference Room Test");
     }
 }
