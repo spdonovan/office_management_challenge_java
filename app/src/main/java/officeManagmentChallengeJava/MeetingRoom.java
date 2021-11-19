@@ -1,7 +1,8 @@
 package officeManagmentChallengeJava;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
+import java.util.Enumeration;
 
 public class MeetingRoom {
     static ArrayList<String> roomList = new ArrayList<String>();
@@ -9,10 +10,14 @@ public class MeetingRoom {
     private String name;
 
     //Constructor
-    public MeetingRoom(String name) {this.name = name; }
+    public MeetingRoom(String name) {
+        this.name = name;
+    }
 
     //Getter
-    public String getRoomName() { return this.name; }
+    public String getRoomName() {
+        return this.name;
+    }
 
     public static void main(String[] args) {
         MeetingRoom office1 = new MeetingRoom("Conference Room 1");
@@ -25,16 +30,17 @@ public class MeetingRoom {
     }
 
     public String addRoom() {
-        name = getRoomName(); {
+        name = getRoomName();
+        {
             roomList.add(name);
         }
         return name;
     }
 
     public static ArrayList<String> listRooms() {
-        String line = String.format("List of all meeting rooms: %s",(roomList));
-        System.out.println(line);
-        return roomList;
+            String rooms = String.format("List of all meeting rooms: %s", (roomList));
+            System.out.println(rooms);
+            return roomList;
     }
 }
 
