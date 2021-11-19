@@ -19,4 +19,10 @@ public class Availability {
         System.out.printf("%s is unavailable \n", roomName);
         return available;
     }
+
+    public boolean vacateRoom(String roomName) {
+        available = true;
+        System.out.printf("%s is now available \n", roomName);
+        return available;
+    }
 }

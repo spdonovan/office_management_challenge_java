@@ -15,4 +15,10 @@ public class RoomAvailabilityTest {
         Availability TestRoom = new Availability(new MeetingRoom("Conference Room 1"));
         assertFalse(TestRoom.isNotAvailable(Availability.roomName));
     }
+
+    @Test public void testMakeRoomAvailable() {
+        Availability TestRoom = new Availability(new MeetingRoom("Conference Room 1"));
+        TestRoom.isNotAvailable("Conference Room 1");
+        assertTrue(TestRoom.vacateRoom(Availability.roomName));
+    }
 }
