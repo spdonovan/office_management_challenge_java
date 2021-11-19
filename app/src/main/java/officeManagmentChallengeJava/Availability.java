@@ -8,6 +8,12 @@ public class Availability {
     public Availability(MeetingRoom name) {
         roomName = name.getRoomName();
     }
+    public static void main(String[] args) {
+        Availability room = new Availability(new MeetingRoom("Conference Room 2"));
+        room.isAvailable(roomName);
+        room.isNotAvailable(roomName);
+        room.vacateRoom(roomName);
+    }
 
     public boolean isAvailable(String roomName) {
         System.out.printf("%s is available \n", roomName);

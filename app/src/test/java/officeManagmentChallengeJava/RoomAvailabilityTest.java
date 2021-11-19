@@ -2,8 +2,7 @@ package officeManagmentChallengeJava;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class RoomAvailabilityTest {
     @Test public void testRoomIsAvailable() {
@@ -20,5 +19,12 @@ public class RoomAvailabilityTest {
         Availability TestRoom = new Availability(new MeetingRoom("Conference Room 1"));
         TestRoom.isNotAvailable("Conference Room 1");
         assertTrue(TestRoom.vacateRoom(Availability.roomName));
+    }
+
+    @Test public void testListOfAvailableRooms() {
+        Availability TestRoom2 = new Availability(new MeetingRoom("Conference Room 2"));
+        TestRoom2.isNotAvailable("Conference Room 2");
+        assertFalse(MeetingRoom.listRooms().contains("Conference Room 2"));
+
     }
 }
