@@ -1,6 +1,7 @@
 package officeManagmentChallengeJava;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class MeetingRoom {
     static ArrayList<String> roomList = new ArrayList<String>();
@@ -18,12 +19,15 @@ public class MeetingRoom {
         office1.addRoom();
     }
 
-
     public String addRoom() {
         name = getRoomName(); {
             roomList.add(name);
         }
         return name;
+    }
+
+    public static ArrayList<String> listRooms() {
+        return roomList;
     }
 }
 
