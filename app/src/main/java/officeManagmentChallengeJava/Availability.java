@@ -13,4 +13,10 @@ public class Availability {
         System.out.printf("%s is available \n", roomName);
         return available;
     }
+
+    public boolean isNotAvailable(String roomName) {
+        available = false;
+        System.out.printf("%s is unavailable \n", roomName);
+        return available;
+    }
 }
