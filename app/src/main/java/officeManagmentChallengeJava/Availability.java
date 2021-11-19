@@ -10,7 +10,7 @@ public class Availability {
     }
 
     public boolean isAvailable(String roomName) {
-
+        System.out.printf("%s is available \n", roomName);
         return available;
     }
 }
