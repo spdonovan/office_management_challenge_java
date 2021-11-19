@@ -17,6 +17,11 @@ public class MeetingRoom {
     public static void main(String[] args) {
         MeetingRoom office1 = new MeetingRoom("Conference Room 1");
         office1.addRoom();
+        MeetingRoom office2 = new MeetingRoom("Conference Room 2");
+        office2.addRoom();
+        MeetingRoom office3 = new MeetingRoom("Conference Room 3");
+        office3.addRoom();
+        MeetingRoom.listRooms();
     }
 
     public String addRoom() {
@@ -27,6 +32,8 @@ public class MeetingRoom {
     }
 
     public static ArrayList<String> listRooms() {
+        String line = String.format("List of all meeting rooms: %s",(roomList));
+        System.out.println(line);
         return roomList;
     }
 }
